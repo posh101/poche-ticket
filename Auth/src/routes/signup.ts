@@ -3,6 +3,8 @@ import express from "express";
 import { validationResult } from "express-validator";
 import { signupValidator } from "../validator/signup.validator";
 import { log } from "../utils/logger";
+import { RequestValidationError } from "../errors/requestValidationError";
+import { databaseConnectionError } from "../errors/databaseConnectionError";
 
 const signupRouter = express.Router();
 
@@ -12,11 +14,11 @@ signupValidator,
     const errors = validationResult(req);
 
     if(!errors.isEmpty()) {
-      throw new Error("Invalid email or pasword")
+      throw new RequestValidationError(errors.array())
     }
 
     log.info("creating user...")
-    throw new Error("Error connecting to database")
+    throw new databaseConnectionError();
 
     res.send({})
   

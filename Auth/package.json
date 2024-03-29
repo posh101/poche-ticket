@@ -20,6 +20,7 @@
     "@types/nodemailer": "^6.4.14",
     "argon2": "^0.40.1",
     "config": "^3.3.11",
+    "crypto": "^1.0.1",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -35,6 +36,7 @@
     "pino": "^8.19.0",
     "pino-pretty": "^11.0.0",
     "pretty": "^2.0.0",
+    "promisify": "^0.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.3",
     "zod": "^3.22.4"

@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 import { User } from "../models/userModel";
 import { RequestValidationError } from "../errors/requestValidationError";
 import { BadRequestError } from "../errors/BadRequestError";
+import { validateRequest } from "../middlewares/validateRequest";
 
 const signupRouter = express.Router();
 
@@ -18,13 +19,8 @@ signupRouter.post("/api/users/signup",
      .isLength({min: 4, max: 20})
      .trim()
 ],
+validateRequest,
  async(req: Request, res: Response) => {
-
-  const errors = validationResult(req);
-
-   if(!errors.isEmpty()) {
-    throw new RequestValidationError(errors.array())
-  }
 
    const { email, password} = req.body;
 

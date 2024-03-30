@@ -13,6 +13,7 @@
   "dependencies": {
     "@typegoose/typegoose": "^12.2.0",
     "@types/config": "^3.3.4",
+    "@types/cookie-session": "^2.0.48",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/lodash": "^4.17.0",
@@ -20,6 +21,7 @@
     "@types/nodemailer": "^6.4.14",
     "argon2": "^0.40.1",
     "config": "^3.3.11",
+    "cookie-session": "^2.1.0",
     "crypto": "^1.0.1",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",

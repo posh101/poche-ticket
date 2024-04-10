@@ -43,6 +43,10 @@ async (req: Request, res: Response) => {
     }, 'secret'
     );
 
+    req.session = {
+      jwt: jwtUser
+    };
+
     res.status(200).send(existingUser);
  }
 );

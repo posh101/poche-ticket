@@ -1,7 +1,6 @@
 import {Request, Response}  from "express";
 import express from "express";
 import { validationResult, body } from "express-validator";
-import { log } from "../utils/logger";
 import  config  from "config";
 import jwt from "jsonwebtoken";
 import { User } from "../models/userModel";

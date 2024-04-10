@@ -6,6 +6,7 @@ import { dbConnect } from "./utils/connectToDb";
 
 const port = config.get<string>("port");
 
+
 app.listen(port, () => {
     dbConnect();
     log.info(`Connected on http://localhost:${port} `)
